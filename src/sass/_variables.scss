@@ -33,8 +33,6 @@ $grid-gutter : 10px;
 // breakpoints
 
 $breakpoints: (
-	(phone 		320px)
-	(tablet 	680px)
-	(desktop 	1170px)
-	(extended 	1440px)
-);
+    (mobile 	768px)
+    (tablet		1170px)
+)

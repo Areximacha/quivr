@@ -2,7 +2,7 @@
 
 # Set this to the root of your project when deployed:
 http_path = "/"
-css_dir = "www/_includes/css"
+css_dir = "parse/public/_includes/css"
 http_stylesheets_path = "/_includes/css"
 sass_dir = "src/sass"
 fonts_dir = "src/fonts"
