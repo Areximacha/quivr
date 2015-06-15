@@ -30,8 +30,6 @@ App.Router = Backbone.Router.extend({
 
 		if (checkUser()) {
 
-			navView();
-
 			$.getScript('_includes/js/views/Home.js', function(view){
 
 				var view = new App.Views.Home;
