@@ -1,0 +1,40 @@
+/*********************
+
+Authors:
+	Jay Tang
+
+Stylesheet:
+	Variables stylesheet
+
+*********************/
+
+// colours
+
+$colour-primary: #333;
+$colour-background: #fff;
+$colour-copy: #333;
+
+// fonts
+
+
+
+// sprites
+
+// create the sprite icon folders and put this back in
+// $sprites: sprite-map("icons/*.png");
+// $sprites2x: sprite-map("icons-2x/*.png");
+
+// layout
+
+$grid-columns : 12;
+$grid-width : 960px;
+$grid-gutter : 10px;
+
+// breakpoints
+
+$breakpoints: (
+	(phone 		320px)
+	(tablet 	680px)
+	(desktop 	1170px)
+	(extended 	1440px)
+);
