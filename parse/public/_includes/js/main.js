@@ -8,16 +8,6 @@ var App = {
 
 Parse.initialize("8DP65SIrYEn03KVcq6oXlItgs9Wp7RkOhXjKLi51", "YF5ayH60rdU3J6b5dsee7JzWe79G4c35zgtecjls");
 
-var TestObject = Parse.Object.extend("TestObject");
-
-var testObject = new TestObject();
-
-testObject.save({
-    foo: "bar"
-}).then(function(object) {
-    alert("yay! it worked");
-});
-
 // Generic model
 App.Models.Model = Backbone.Model.extend({
     defaults: {
