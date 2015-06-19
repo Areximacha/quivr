@@ -6,6 +6,8 @@ App.Router = Backbone.Router.extend({
 		'home': 'home',
 		'register': 'register',
 		'login': 'login',
+		'half-portsmouth': 'halfPortsmouth',
+		'logout': 'logOut',
 		'*other': 'fourohfour'
 	},
 
@@ -77,6 +79,38 @@ App.Router = Backbone.Router.extend({
 			Backbone.history.navigate('home', true);
 
 		}
+	},
+
+	halfPortsmouth: function() {
+
+		if (checkUser()) {
+
+			$.getScript('_includes/js/views/HalfPortsmouth.js', function(view){
+
+				var view = new App.Views.HalfPortsmouth;
+
+			});
+
+		} else {
+
+			Backbone.history.navigate('', true);
+
+		}
+
+	},
+
+	logOut : function(){
+
+		try {
+
+			Parse.User.logOut();
+
+		} catch(error){
+
+		}
+
+		Backbone.history.navigate('', true);
+
 	},
 
 	fourohfour: function() {
