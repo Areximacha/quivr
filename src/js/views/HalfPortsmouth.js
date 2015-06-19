@@ -35,20 +35,27 @@ App.Views.HalfPortsmouth = Backbone.View.extend({
             e.preventDefault();
             
             var points = 0;
+                row = point.closest(".row");
 
             newPoint = $(e.currentTarget).data("score");
 
             point.val(newPoint);
 
 
-            point.closest(".row").find(".shot-point").each(function(){
+            row.find(".shot-point").each(function(){
 
-                var currentPoint = parseInt($(this).val(), 10);
+                var value = $(this).val().trim();
 
-                points += currentPoint;
+                if(value || value == '0') {
+
+                    var currentPoint = parseInt($(this).val(), 10);
+
+                    points += currentPoint;
+                }
+
             });
 
-            console.log(points);
+            row.find(".total").val(points);
 
             target.hide();
 

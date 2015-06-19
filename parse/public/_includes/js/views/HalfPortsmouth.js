@@ -21,13 +21,17 @@ App.Views.HalfPortsmouth = Backbone.View.extend({
         self.$el.find(".target a").off().on("click", function(e) {
             e.preventDefault();
             var points = 0;
+            row = point.closest(".row");
             newPoint = $(e.currentTarget).data("score");
             point.val(newPoint);
-            point.closest(".row").find(".shot-point").each(function() {
-                var currentPoint = parseInt($(this).val(), 10);
-                points += currentPoint;
+            row.find(".shot-point").each(function() {
+                var value = $(this).val().trim();
+                if (value || value == "0") {
+                    var currentPoint = parseInt($(this).val(), 10);
+                    points += currentPoint;
+                }
             });
-            console.log(points);
+            row.find(".total").val(points);
             target.hide();
         });
         target.show();
